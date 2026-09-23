@@ -1,0 +1,40 @@
+name: Build Windows EXE
+
+# این workflow روی یک ماشین واقعی ویندوز (windows-latest) در GitHub اجرا
+# می‌شود و فایل EXE واقعی را می‌سازد. کافی است این پروژه را در یک ریپازیتوری
+# گیت‌هاب (حتی خصوصی) push کنید؛ ساخت به‌صورت خودکار اجرا می‌شود و می‌توانید
+# فایل EXE را از تب Actions همان ریپازیتوری دانلود کنید.
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build EXE with PyInstaller
+        run: |
+          pyinstaller --onefile --windowed --name DNSBenchmark `
+            --add-data "dns_providers.json;." `
+            main.py
+
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DNSBenchmark-windows-exe
+          path: dist/DNSBenchmark.exe
