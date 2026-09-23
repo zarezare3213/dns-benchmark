@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "note": "این فهرست شامل «همهٔ DNSهای دنیا» نیست؛ فقط شناخته‌شده‌ترین سرویس‌دهنده‌های عمومی معتبر است. برای افزودن یا به‌روزرسانی، از دکمهٔ «به‌روزرسانی فهرست» در برنامه یا ویرایش دستی همین فایل استفاده کنید.",
+    "last_reviewed": "2026-09",
+    "schema_version": 1
+  },
+  "providers": [
+    {
+      "name": "Google Public DNS",
+      "ipv4": ["8.8.8.8", "8.8.4.4"],
+      "ipv6": ["2001:4860:4860::8888", "2001:4860:4860::8844"],
+      "source": "https://developers.google.com/speed/public-dns"
+    },
+    {
+      "name": "Cloudflare DNS",
+      "ipv4": ["1.1.1.1", "1.0.0.1"],
+      "ipv6": ["2606:4700:4700::1111", "2606:4700:4700::1001"],
+      "source": "https://developers.cloudflare.com/1.1.1.1/"
+    },
+    {
+      "name": "Quad9",
+      "ipv4": ["9.9.9.9", "149.112.112.112"],
+      "ipv6": ["2620:fe::fe", "2620:fe::9"],
+      "source": "https://www.quad9.net/service/service-addresses-and-features"
+    },
+    {
+      "name": "OpenDNS (Cisco)",
+      "ipv4": ["208.67.222.222", "208.67.220.220"],
+      "ipv6": ["2620:119:35::35", "2620:119:53::53"],
+      "source": "https://www.opendns.com/setupguide/"
+    },
+    {
+      "name": "AdGuard DNS",
+      "ipv4": ["94.140.14.14", "94.140.15.15"],
+      "ipv6": ["2a10:50c0::ad1:ff", "2a10:50c0::ad2:ff"],
+      "source": "https://adguard-dns.io/en/public-dns.html"
+    },
+    {
+      "name": "CleanBrowsing (Family Filter)",
+      "ipv4": ["185.228.168.168", "185.228.169.168"],
+      "ipv6": ["2a0d:2a00:1::", "2a0d:2a00:2::"],
+      "source": "https://cleanbrowsing.org/filters/"
+    },
+    {
+      "name": "Comodo Secure DNS",
+      "ipv4": ["8.26.56.26", "8.20.247.20"],
+      "ipv6": [],
+      "source": "https://www.comodo.com/secure-dns/"
+    },
+    {
+      "name": "Yandex DNS (Basic)",
+      "ipv4": ["77.88.8.8", "77.88.8.1"],
+      "ipv6": ["2a02:6b8::feed:0ff", "2a02:6b8:0:1::feed:0ff"],
+      "source": "https://dns.yandex.com/"
+    },
+    {
+      "name": "DNS.WATCH",
+      "ipv4": ["84.200.69.80", "84.200.70.40"],
+      "ipv6": ["2001:1608:10:25::1c04:b12f", "2001:1608:10:25::9249:d69b"],
+      "source": "https://dns.watch/"
+    },
+    {
+      "name": "Verisign Public DNS",
+      "ipv4": ["64.6.64.6", "64.6.65.6"],
+      "ipv6": ["2620:74:1b::1:1", "2620:74:1c::2:2"],
+      "source": "https://www.verisign.com/en_US/security-services/public-dns/index.xhtml"
+    },
+    {
+      "name": "NextDNS (Anycast)",
+      "ipv4": ["45.90.28.0", "45.90.30.0"],
+      "ipv6": [],
+      "source": "https://nextdns.io/"
+    }
+  ]
+}
